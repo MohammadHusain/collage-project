@@ -1,0 +1,317 @@
+*{padding: 0;margin: 0}
+		body{
+			z-index: -2;
+			min-width: 300px;
+		}
+		.movie-header{
+			position: relative;
+			background: linear-gradient(-170deg,rgba(255, 27, 40, 0.5),rgba(0, 0, 0, 1)),url('../Images/Movie-image/movie-header4.jpg');
+			background-size: cover;/*
+			background-attachment: fixed;*/
+			background-position: top;
+			animation: background_animate 25s infinite;
+			z-index: 2;
+		}
+		.movie-header:after{
+			content: '';
+			position: absolute;
+			width: 50%;
+			background-color: white;
+			height: 50px;
+			bottom: 0;
+			left: 0;
+			transform: translate(0 ,50%) skewY(3deg);
+		}
+		.movie-header:before{
+			content: '';
+			position: absolute;
+			width: 50%;
+			background-color: white;
+			height: 50px;
+			bottom: 0;
+			right: 0;
+			transform: translate(0 ,50%) skewY(-3deg);
+		}
+		@keyframes background_animate{
+			0%{
+				background-position: top;
+			}
+			50%{
+				background-position: bottom;
+			}
+			100%{
+				background-position: top;
+			}
+		}
+		.header-content{
+			margin:auto;
+		}
+		.header-content:after{
+			position: absolute;
+			content: '';
+			background-color: #c82333;
+			bottom: 32px;
+			left: 0;
+			width: 50%;
+			height: 3px;
+			transform: translate(0 ,50%) skewY(3deg);
+		}
+		.header-content:before{
+			position: absolute;
+			content: '';
+			background-color: #c82333;
+			bottom: 32px;
+			right: 0;
+			width: 50%;
+			height: 3px;
+			transform: translate(0 ,50%) skewY(-3deg);
+		}
+		hr{
+			margin: 0;
+			margin-bottom: 3px;
+			width: 100%;
+		}
+		.movies_icon{
+			width: 100%;
+			border-radius: 2px;
+			transition: 0.5s;
+		}
+		.movieIconContainer{
+			position: relative;
+			overflow: hidden;
+		}
+		/*--design for addtolist movie--*/
+		.movieIconContainer .removeList{
+			position: absolute;
+			top: 0;
+			right: 0;
+			color:white;
+			padding: 3px 8px 3px 3px;
+			font-size: 25px;
+			font-weight: lighter;
+			//transform: rotate(45deg);
+		}
+		.hover:hover .movies_icon{
+			transform: scale(1.05);
+		}
+		.hover:hover .fig_overlay{
+			opacity: 1;
+		}
+		.fig_overlay{
+			position: absolute;
+			background:linear-gradient( rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: 0.3s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.button-design{
+			min-width: 60%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			font-size: 12px;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+			border-radius: 3px
+		}
+		.button-design a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			padding: 5px;
+		}
+		/*#symbol{
+			display: none;
+		}*/
+		.button-design:before{
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.addList{
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			font-size: 20px;
+		}
+		.movie-name-style{
+			font-size: 14px;
+			overflow: hidden;
+			text-overflow:ellipsis; 
+			white-space: nowrap;
+		}
+		.font-responsive{
+			font-size: 15px;
+		}
+		#city-search-container{
+			margin: -10px;
+			position: relative;
+		}
+		#autofill-city{
+			border-radius: 2px;
+			margin-top: 1px;
+		}
+		#autofill-city li{
+			list-style: none;
+			border-radius: 3px;
+			padding: 5px;
+			padding-left: 15px;
+			border-top: 1px solid rgba(19, 18, 18, 0.55);
+		}
+		#autofill-city li:hover{
+			background-color: rgb(255, 166, 166);
+		}
+
+		.underline{
+			width: 18%;
+			min-width: 150px;
+			margin: auto;
+			height: 2px;
+			background-color: black;
+			position: relative;
+			z-index: -1;
+		}
+		.underline:after{
+			content: '';
+			position: absolute;
+			top: 2px;
+			left:50%;
+			background-color: black;
+			height:2px;
+			width: 31px;
+			transform: translateX(-50%);
+		}
+		.underline:before{
+			content: '';
+			position: absolute;
+			top: -2px;
+			right:50%;
+			background-color: black;
+			height:2px;
+			width: 31px;
+			transform: translateX(50%);
+		}
+
+
+		@media (max-width: 576px) {
+			#movie-heading{
+				font-size: 50px;
+			}
+			.font-responsive{
+				font-size: 12px;
+			}
+			.hover section{
+				padding: 0!important;
+			}
+		}
+		@media (max-width: 360px){
+			#movie-heading{
+				font-size: 30px;
+			}
+			#search-movie{
+				height: 25px;
+				font-size: 12px;
+				border: 0;
+				margin: 0;
+			}
+			#search-button{
+				height: 25px;
+				min-width: 40px;
+				font-size: 12px;
+				padding: 0;
+				border: 0;
+				margin-top: -2px;
+			}
+			.header-content{
+				padding: 25px!important;
+				padding-top: 0px!important;
+			}
+			#body-header{
+				font-size: 15px;
+			}
+			#autofill-city li{
+				padding: 0px;
+				font-size: 13px;
+				padding-left: 5px
+			}
+			.fig_overlay a,.fig_overlay button{
+				font-size: 10px!important;
+			}
+		}
+
+		/*-------------movie link slider-----------*/
+		.movieSliderContainer{
+			width: 250%;
+			height: auto;
+			position: relative;
+			animation: slide 20s infinite ease
+		}
+		.movie_slide{
+			width: 20%;
+			display: inline-block;
+			float: left;
+			padding: 0 2px;
+		}
+		.movie_slide img{
+			width: 100%;
+			object-fit: cover;
+			border-radius: 10px
+		}
+		@keyframes slide{
+			0%,10%{transform: translateX(0);}
+			14%{transform: translateX(-10%);}
+			22%{transform: translateX(-10%);}
+			26%{transform: translateX(-30%);}
+			34%{transform: translateX(-30%);}
+			38%{transform: translateX(-50%);}
+			46%{transform: translateX(-50%);}
+			50%{transform: translateX(-60%);}
+			58%{transform: translateX(-60%);}
+			62%{transform: translateX(-50%);}
+			70%{transform: translateX(-50%);}
+			74%{transform: translateX(-30%);}
+			82%{transform: translateX(-30%);}
+			87%{transform: translateX(-10%);}
+			95%{transform: translateX(-10%);}
+			100%{transform: translateX(0);}
+		}
+		@media (max-width: 900px) {
+			.movieSliderContainer{
+				width: 500%;
+				animation: slideB 20s infinite; 
+			}
+			.movie_slide{
+				width: 20%;
+			}
+		}
+		@keyframes slideB{
+			0%{transform: translateX(0);}
+			10%{transform: translateX(0);}
+			14%{transform: translateX(-20%);}
+			22%{transform: translateX(-20%);}
+			26%{transform: translateX(-40%);}
+			34%{transform: translateX(-40%);}
+			38%{transform: translateX(-60%);}
+			46%{transform: translateX(-60%);}
+			50%{transform: translateX(-80%);}
+			58%{transform: translateX(-80%);}
+			62%{transform: translateX(-60%);}
+			70%{transform: translateX(-60%);}
+			74%{transform: translateX(-40%);}
+			82%{transform: translateX(-40%);}
+			87%{transform: translateX(-20%);}
+			95%{transform: translateX(-20%);}
+			100%{transform: translateX(0);}
+		}

@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/*---Poppins---*/
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*---Dodis---*/
+/* vietnamese */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dosis/v16/HhyJU5sn9vOmLxNkIwRSjTVNWLEJN7Ml1BMEfq4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dosis/v16/HhyJU5sn9vOmLxNkIwRSjTVNWLEJN7Ml1RMEfq4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dosis/v16/HhyJU5sn9vOmLxNkIwRSjTVNWLEJN7Ml2xME.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*{
+	padding: 0;margin: 0;
+}
+.tyre-animation-container{
+	position: absolute;
+	bottom: 0;
+	left: 250px;
+	width: 230px;
+	transform-origin: top left;
+	transform: rotate(45deg)translateY(42%);
+	border: 2px solid gold;
+  	border-radius: 50%;
+	border-bottom-color: transparent;
+  	border-right-color: transparent;
+  	box-sizing: border-box;
+  	padding: 5px;
+  	z-index: 10;
+}
+.tyre-animation{
+	/*position: absolute;*/
+	/*width: 230px;*/
+	/*bottom: 0;*/
+	/*left: 50px;*/
+	/*transform: translateY(50%);*/
+	background-color: white;
+	border-radius: 50%;
+}
+.tyre-rotate{
+	animation: tyreAnimate 4s linear infinite;
+}
+@keyframes tyreAnimate
+{
+	0%
+	{
+        transform: rotate(0deg);
+	}
+	100%
+	{
+        transform: rotate(360deg);
+	}
+}
+
+.rental_car_header
+{
+	background: linear-gradient(45deg,rgba(24, 21, 22, 0),rgb(0, 0, 0)),url(../Images/ferrari.jpeg);
+	height: 31rem;
+	background-size: cover;
+	background-position: center;	
+	display: flex;	
+	justify-content: flex-end;
+	align-items: center;
+	font-family: 'Noto Sans JP', sans-serif;
+	position: relative;
+}
+.rental_car_header:after{
+	position: absolute;
+	content: '';
+	bottom: 4px;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: gold;
+}
+
+.rental_car_header_content{
+
+}
+.rental_car_header_content h1{
+	font-weight: 600;
+	font-size: 50px;
+}
+.rental_car_header_content p{
+	margin:0;
+	font-size: 13px;
+}
+.searchContainer input{
+	width:300px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid gold;
+	outline: none;
+	color:white;
+	padding-left: 10px;
+	padding: 4px 15px;
+}
+.searchContainer input::placeholder{
+	color:white;
+	opacity: 0.5;
+}
+.searchContainer button{
+	padding: 4px 15px;
+	border-radius: 20px;
+	background-color: rgb(101, 1, 6);
+	color: white;
+	cursor: pointer;
+	outline: none;
+}/*
+.slide-1{
+	transition: 0.4s;
+	backface-visibility: hidden;
+	width: 100%;
+	z-index: 5;
+	transform: perspective(1000px) rotateY(0deg);
+}
+.slide-2{
+	transform: perspective(1000px) rotateY(180deg);
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	z-index: -1;
+	transition: 0.4s;
+}
+.car-hover:hover .slide-1{
+	transform: perspective(1000px) rotateY(180deg);
+}
+.car-hover:hover  .slide-2{
+	transform: perspective(1000px) rotateY(360deg);
+}*/
+.recommendHeading{
+	font-size:35px;
+	font-weight: 400;
+}
+@media (max-width: 1000px){
+	.tyre-animation-container{
+		display: none;
+	}
+}
+@media (max-width: 850px){
+	.rental_car_header_content h1{
+		font-size: 40px;
+	}
+	.rental_car_header{
+		text-align: center;
+	}
+	.searchContainer{
+		justify-content: center;
+	}
+	.list_CarCityUnstyle{
+		font-size: 10px;
+	}
+	.recommendHeading{
+		font-size:30px;
+		font-weight: 400;
+	}
+	.carBooknow_carCondition span{
+		font-size: 15px!important;
+	}
+}
+@media (max-width: 600px){
+	.rental_car_header{
+		height: 20rem;
+	}
+	.searchContainer input{
+		width: 200px;
+	}
+	.recommendHeading{
+		font-size:25px;
+		font-weight: 400;
+	}
+}
+@media (max-width: 500px)
+{
+	.rental_car_header_content p{
+		font-size: 10px!important;
+	}
+	.rental_car_header_content h1{
+		font-size: 30px;
+	}
+	.searchContainer input{
+		width: 150px;
+		font-size: 10px;
+		padding:4px 8px;
+	}
+	.searchContainer button{
+		padding:4px 8px;
+		font-size: 10px;
+	}
+	.recommendHeading{
+		font-size:20px;
+		font-weight: 400;
+	}
+}
+
+/*---promoted car---*/
+.carPromoted_cardContainer{
+}
+.carPromoted_card{
+	position: relative;
+	overflow: hidden;
+}
+.carDetail_overlay{
+	//position: absolute;
+	width: 90%;
+	height: 100%;
+	transform: translateY(-30px);
+	margin: auto;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	transition: 0.3s;
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.20);
+	font-family: 'Poppins', sans-serif!important;
+
+}
+.carPromoted_cardContainer .card{
+	border: none;
+	border-top: 1px solid rgba(0,0,0,.125);
+	overflow: hidden;
+}
+.carDetail_overlay .carPromoted_name{
+	color: rgb(255, 33, 79);
+	font-size: 15pt;
+	font-weight: bold;
+}
+.carDetail_overlay .carPromoted_city{
+	color: black;
+	font-size: 10pt;
+}
+.carDetail_overlay .carPromoted_detail{
+	color: rgb(255, 33, 79);
+	font-size: 12pt;
+}
+.carPromoted_cardContainer .card img{
+	border-radius: 5px;
+	transition: 0.5s;
+}
+.carPromoted_cardContainer .card .image-container{
+	position: relative;
+	overflow: hidden;
+}
+.carPromoted_cardContainer .card .image-container div{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 3px 15px;
+	background-color: rgb(255, 33, 79);
+	color: white;
+	z-index: 1;
+	border-radius: 3px;
+}
+.carPromoted_cardContainer .card .image-container div:after{
+	content: '';
+	position: absolute;
+    width: 0;
+    height: 100%;
+    border-left: 10px solid rgb(255, 33, 79);
+    border-bottom: 10px solid transparent;
+    left: 0;
+    bottom: -10px;
+    z-index: -1;
+}
+.carPromoted_cardContainer:hover .image-container img{
+	transform: scale(1.03);
+}
+/*------Auto Complete-------*/
+.list_CarCityUnstyle{
+	list-style: none;
+	padding: 5px;
+	padding-left:10px;
+	background-color: rgba(42, 36, 36, 0.85);
+	width: 100%;
+	font-family: ''Noto Sans JP', sans-serif';
+	font-weight: 200;
+	text-align: left!important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.list_CarCity{
+	cursor: pointer;
+}
+
+/*----------Book now----------*/
+.car_BookNowHeader{
+	background:url(../Images/carBackground4.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+.bookNow_carHeader{
+	
+	/*background:linear-gradient(45deg,rgba(21, 11, 8, 0.51),rgba(255, 250, 250, 0.7)),url(../Images/car_BookNowHeader.jpg);
+*/
+
+	/*background-size: cover;
+	background-position: center;*/
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.carBookNowHeader{
+	position: relative;
+}
+.carBooknow_carname{
+	font-size: 40px;
+	font-weight: 400;
+	color: #74b9ff;
+	margin-top: 10px;
+}
+.carBooknow_carCity{
+	font-size: 18px;
+	color:#dfe6e9;
+	font-weight: lighter;
+}
+.carBooknow_carCity b{
+	font-size: 20px;
+	color: #e58e26!important;
+	font-weight: 500;
+}
+.carBooknow_carPrice{
+	font-size: 30px;
+	color: #dc3545;
+	margin-left: auto;
+}
+.carheaderBorder img{
+	border-radius: 3px;
+	clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+	-webkit-clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+}
+@media (max-width: 500px){
+	.carBooknow_carname, .carBooknow_carPrice{
+		font-size: 25px;
+	}
+	.carBooknow_carCity{
+		font-size: 15px;
+	}
+}
+@media (max-width: 767px){
+	.carBookNowHeader{
+		flex-direction: column!important;
+	}
+	.carheaderBorder{
+		margin: auto;
+		padding: 0!important;
+	}
+	.carheaderBorder:after{
+		display: none;
+	}
+	.carheaderBorder:before{
+		display: none;
+	}
+	.carheaderBorder img{
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)!important;
+		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)!important;
+	}
+	.carBookNowContent{
+		margin: auto;
+		padding: 20px!important;
+	}
+}
+.placelolderIcon{
+	font-family: fontawesome;
+}
+.car_BookNowFileds_Caption{
+	font-size: 17px;
+	color: white;
+	font-weight: 600;
+}
+.TotalCarAmountStyle{
+	font-size: 30px;
+	font-weight: bold;
+	color: #dc3545;
+}
+.blackTransperent{
+	background-color: rgba(0, 0, 0, 0.7)!important;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
+}
+.CarDetailBox{
+	//transform: translateY(30%);
+	margin-top: 30px!important;
+}
+
+
+
+.addOrMinus_car{
+	position: absolute;
+	top: 0;
+	transform: translateY(-50%);
+	right: 15px;
+	padding: 9px 14px;
+	cursor: pointer;
+	border-radius: 50%;
+	outline: none!important;
+	border: none;
+	background-color: rgb(255, 33, 79);
+	color: white
+}
+
+/*----new header----*/
+.carheaderBorder{
+	position: relative;
+}
+.carheaderBorder:after{
+	content: '';
+	position: absolute;
+	height: 50%;
+	width: 2px;
+	top: 0;
+	right: 25px;
+	background: linear-gradient(to top, #22c1c3, #fdbb2d);
+	transform: skew(9deg);
+}
+.carheaderBorder:before{
+	content: '';
+	position: absolute;
+	height: 50%;
+	width: 2px;
+	bottom: 0;
+	right: 25px;
+	background: linear-gradient(to bottom,  #22c1c3, #fdbb2d);
+	transform: skew(-9deg);
+}
+.carheaderBorder img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+.carBookNowHeader:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(to left, #ff9966, #ff5e62);
+}
+.bookNowButton{
+	padding: 7px 50px;
+	border-radius: 0;
+	border: 0;
+	background-color: #00b894;
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
+.car_fieldAlert{
+	color: red;
+}
+.btnBookNow_car{
+	background-color: rgb(31, 46, 131);
+	color: white;
+	letter-spacing: 1px;
+	border-radius: 0;
+	border: 2px solid rgb(31, 46, 131);
+}
+.btnBookNow_car:hover{
+	background-color: white;	
+	color:rgb(31, 46, 131);
+}
+
+/*--Services--*/
+@media (max-width: 992px) {
+	.Car_hide{
+		display: none;
+	}
+}
+/*=------Transaction Detail------=*/
+#TransactionDetail tr td{
+	font-size: 18px
+}
+#TransactionDetail tr th{
+	font-size: 18px;
+	text-transform: uppercase;
+	color: grey
+}
+
+
+/*--offer style----*/
+.skew-section1{
+	width: 100%;
+	transform:translate(-100px)skew(-16deg);
+	padding: 0 100px 0 0px;
+	display: flex;
+	margin:auto;
+	min-height: 30rem;
+	overflow:hidden;
+}
+.skew-section1-content{
+	width: 90%!important;
+	transform:translate(150px) skew(16deg);
+	position: relative;
+	padding-right: 140px;
+}
+.skew-section2{
+	height: 100%;
+	width: 100%;
+	margin: auto 0;
+	transform: translateX(-130px) skew(-16deg);
+	padding-left: 20px;
+	overflow: hidden;
+	background-color:  #c0392b;
+}
+.skew-section2-content{
+	padding:10px 40px;
+	transform: skew(16deg);	
+}
+.skew-section1-content .c1{
+	font-family: "Dosis", sans-serif;
+	font-size: 22px;
+	color:white;
+}
+.skew-section1-content .c2{
+	font-size: 44px;
+	font-family: "Dosis", sans-serif;
+	font-weight: bold;
+	position: relative;
+	padding-bottom: 10px;
+	color:white;
+}
+.skew-section1-content .c2 span,.skew-section2-content .c1 span{
+	font-weight: 100;
+}
+.skew-section1-content .c2:after,.skew-section2-content .c1:after{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 80px;
+	background-color: red;
+	bottom: 0;
+	left: 0;
+}
+.skew-section2-content .c1:after{
+	background-color: black
+}
+.skew-section1-content .c3 p{
+	margin: 20px 0;
+	font-weight: 500;
+	color:white;
+	font-size: 18px;
+	font-family: "Dosis", sans-serif;
+}
+
+.skew-section1-content .c4{
+	padding:15px 5px 15px 15px;
+	position: relative;
+	background-color: #c0392b;
+	color: white;
+	border: 0;
+	letter-spacing: 2px;
+	outline: none;
+}
+.skew-section1-content .c4:after{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: -15px;
+	height: 100%;
+	width: 10px;
+	border-left: 16px solid #c0392b;
+	border-bottom: 16px solid transparent;
+}
+.skew-section2-container{
+	position: relative;
+	height: 87%;
+	background-color:  #c0392b;
+}
+.skew-section2{
+	
+}
+.skew-section2-content .c1{
+	font-size: 35px;
+	font-family: "Dosis", sans-serif;
+	font-weight: bold;
+	position: relative;
+	padding-bottom: 15px;
+	color: white;
+}
+.skew-section2-content .c2{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	color: white;
+	z-index: 20;
+	font-family: "Dosis", sans-serif;
+	letter-spacing: 1px;
+	font-size: 18px
+}
+.skew-section2-content .c3{
+
+}
+.skew-section2-content .c3 ul ,.skew-section2-content .c3 ul li{
+	list-style-type: circle;
+	margin-left: 10px;
+	padding: 0;
+	font-size: 16px;
+	font-weight:500;
+	margin-top: 8px;
+	color: white;
+	z-index: 20;
+	font-family: "Dosis", sans-serif;
+	letter-spacing: 1px;
+	font-size: 18px
+}
+.CarOfferImage{
+	position: absolute;
+	bottom: 0;
+	right: 0px;
+}
+.CarOfferBackgroundImage{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: -10%;
+	transform: skew(-16deg);
+	z-index: -1;	
+	overflow: hidden;
+}
+.CarOfferBackgroundImage img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.CarOfferBackgroundImage:after{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(27, 25, 25, 0.49);;
+	top: 0;
+	left: 0;
+}
+@media (max-width: 1150px) {
+	.CarOfferImage{
+		position: absolute;
+		bottom: 0;
+		right: -20%;
+	}
+}
+@media (max-width: 991px) {
+	.skew-section1{
+		transform: translate(0px)skew(0deg);
+	}
+	.skew-section1-content{
+		width: 100%!important;
+		transform: translate(0px) skew(0deg);
+		padding: 0 100px
+	}
+	.skew-section2{
+		height: 30rem;
+		transform: translateX(0px) skew(0deg);
+		width: 60%;
+	}
+	.skew-section2-container{
+		height: 100%;
+		width: 100%;
+	}
+	.skew-section2-content{
+		transform:translate(0px) skew(0deg);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+	.CarOfferImage{
+		right: 0
+	}
+	.CarOfferBackgroundImage{
+		transform: skew(0deg);
+		left: 0;
+	}
+}
+@media (max-width: 800px) {
+	.CarOfferImage{display: none;}
+	.skew-section2{
+		width: 95%;
+	}
+	.skew-section1-content{
+		padding: 30px;
+	}
+	.skew-section2{
+		height: auto;
+	}
+	.skew-section1{
+		padding:0px;
+	}
+}
